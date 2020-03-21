@@ -1,0 +1,19 @@
+<% include ./partials/header %> 
+  <form action="/created" method="POST">
+    <fieldset>
+      <legend>Poll statement</legend>
+      <textarea name="statement" id="textarea-pollstatement" cols="30" rows="10">
+      </textarea>
+    </fieldset>
+    <fieldset>
+      <legend>Answers</legend>
+      <label for="answer1">answer 1
+      <input name="answer1" id="answer1" type="text"></label>
+      <label for="answer1">answer 2</label>
+      <input name="answer2" id="answer2"  type="text">
+      <label for="answer1">answer 3</label>
+      <input name="answer3" id="answer3"  type="text">
+    </fieldset>
+    <button type="submit">Create</button>
+  </form>
+<% include ./partials/footer %> 

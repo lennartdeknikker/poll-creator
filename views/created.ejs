@@ -1,0 +1,7 @@
+<% include ./partials/header %> 
+  <h3>poll is created</h3>
+  <h4>poll code: <%= code %> </h4>
+  <p>url for entering this poll: <a href="<%= pollUrl %>"><%= pollUrl %></a></p>
+  <h4>Poll statement: <%= statement %> </h4>
+  <a href="/close?code=<%=code%> "><button>close poll and view results</button></a>
+<% include ./partials/footer %> 
