@@ -3,7 +3,7 @@
 <% if (voted) { %>
   <p>You voted for answer <%= voted %> </p> 
 <% } %>
-<% if (closing) { %>
+<% if (!open) { %>
   <p>Poll is closed now</p> 
 <% } %>
 <h3>Answer 1: <%= answer1 %> </h3>

@@ -7,7 +7,7 @@ const Poll = require('../pollmodel')
 /* GET home page. */
 router.get('/', function(req, res) {
     const code = req.query.code
-  
+
     const onConnect = function() {
         Poll.findOne({ code: code }, function (err, poll) {
             if (err) {

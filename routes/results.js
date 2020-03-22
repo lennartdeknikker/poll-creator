@@ -11,7 +11,7 @@ router.get('/', function(req, res) {
         Poll.findOne({ code: code }, function (err, poll) {
             res.render('results', {
                 voted: voted,
-                closing: false,
+                open: poll.open,
                 title: `Results for poll ${code}`,
                 code: poll.code,
                 statement: poll.statement,

@@ -23,7 +23,7 @@ router.get('/', function(req, res) {
         if (poll) {
             res.redirect(`/results?code=${code}&voted=${vote}`)
         } else {
-            res.render('error', {message: 'this poll is already closed'})
+            res.render('closed', {title: 'this poll is already closed', code: code})
         }
     }
 
