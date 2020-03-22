@@ -1,6 +1,5 @@
 require('dotenv').config()
 
-var createError = require('http-errors')
 var express = require('express')
 var path = require('path')
 var cookieParser = require('cookie-parser')
@@ -36,7 +35,7 @@ app.use('/results', resultsRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-    next(createError(404))
+    res.render('error', { message: 'Sorry, I don\'t think this page exists.' })
 })
 
 // error handler
@@ -47,7 +46,7 @@ app.use(function(err, req, res) {
 
     // render the error page
     res.status(err.status || 500)
-    res.render('error')
+    res.render('error', { message: err.message })
 })
 
 module.exports = app

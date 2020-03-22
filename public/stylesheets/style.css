@@ -1,3 +1,9 @@
+:root {
+  --green: #648271;
+  --pink: #FFAC8B;
+  --yellow: #FFE98B;
+}
+
 input {
   display: block;
 }
