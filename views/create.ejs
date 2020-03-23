@@ -2,18 +2,17 @@
   <form action="/created" method="POST">
     <fieldset>
       <legend>Poll statement</legend>
-      <textarea name="statement" id="textarea-pollstatement" cols="30" rows="10">
-      </textarea>
+      <textarea maxlength="445" name="statement" id="textarea-pollstatement" cols="30" rows="10" placeholder="Write down your statement here"></textarea>
     </fieldset>
     <fieldset>
       <legend>Answers</legend>
-      <label for="answer1">answer 1
-      <input name="answer1" id="answer1" type="text"></label>
-      <label for="answer1">answer 2</label>
-      <input name="answer2" id="answer2"  type="text">
-      <label for="answer1">answer 3</label>
-      <input name="answer3" id="answer3"  type="text">
+      <label for="answer1">A</label>
+      <input name="answer1" id="answer1" type="text" placeholder="first answer" maxlength="100">
+      <label for="answer1">B</label>
+      <input name="answer2" id="answer2"  type="text" placeholder="second answer" maxlength="100">
+      <label for="answer1">C</label>
+      <input name="answer3" id="answer3"  type="text" placeholder="third answer" maxlength="100">
     </fieldset>
-    <button type="submit">Create</button>
+    <input type="submit" value="Create" />
   </form>
 <% include ./partials/footer %> 

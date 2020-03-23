@@ -17,7 +17,7 @@ router.get('/', function(req, res) {
 
         res.render('results', {
             voted: false,
-            open: true,
+            open: poll.open,
             title: `Results for poll ${code}`,
             code: poll.code,
             statement: poll.statement,

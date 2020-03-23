@@ -1,9 +1,9 @@
-<% include ./partials/header %> 
+<% include ./partials/header %>
   <h2>Poll <%= code %> </h2>
-  <h3><%= statement %></h3>
-  <ul>
-    <a href="/vote?answer=1&code=<%= code %>"><li><button><%= answer1 %></button></li></a>
-    <a href="/vote?answer=2&code=<%= code %>"><li><button><%= answer2 %></button></li></a>
-    <a href="/vote?answer=3&code=<%= code %>"><li><button><%= answer3 %></button></li></a>
+  <h3><span>Statement: </span><%= statement %></h3>
+  <ul class="answer-buttons-list">
+    <li><a href="/vote?answer=1&code=<%= code %>"><button><span>A. </span><%= answer1 %></button></a></li>
+    <li><a href="/vote?answer=2&code=<%= code %>"><button><span>B. </span><%= answer2 %></button></a></li>
+    <li><a href="/vote?answer=3&code=<%= code %>"><button><span>C. </span><%= answer3 %></button></a></li>
   </ul>
 <% include ./partials/footer %>

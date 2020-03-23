@@ -1,33 +1,38 @@
 <% include ./partials/header %>
+
 <h2>Statement: <%= statement %> </h2>
 <% if (voted) { %>
-  <p>You voted for answer <%= voted %> </p> 
+  <h3>You voted for answer <%= voted %> </h3> 
 <% } %>
 <% if (!open) { %>
-  <p>Poll is closed now</p> 
+  <h4>This poll is closed now.</h4> 
 <% } %>
-<h3>Answer 1: <%= answer1 %> </h3>
-<p>votes: <%= votes1 %> </p>
-<h3>Answer 2: <%= answer2 %> </h3>
-<p>votes: <%= votes2 %> </p>
-<h3>Answer 3: <%= answer3 %> </h3>
-<p>votes: <%= votes3 %> </p>
+<ul class="poll-details-list">
+  <li><span>Answer 1: <%= answer1 %></span><%= votes1 %> 
+    <% if (votes1 === 1) { %>
+      vote
+    <% } else { %>
+      votes
+    <% } %>
+  </li>
+  <li><span>Answer 2: <%= answer2 %> </span><%= votes2 %> 
+    <% if (votes2 === 1) { %>
+      vote
+    <% } else { %>
+      votes
+    <% } %>
+  </li>
+  <li><span>Answer 3: <%= answer3 %> </span><%= votes3 %> 
+    <% if (votes3 === 1) { %>
+      vote
+    <% } else { %>
+      votes
+    <% } %>
+  </li>
+</ul>
 
 <% if (refreshUrl) { %>
   <a href="<%= refreshUrl %> "><button>Refresh</button></a>
 <% } %>
 
 <% include ./partials/footer %> 
-
-
-<!-- 
-title: `Results for ${code}`,
-code: poll.code,
-statement: poll.statement,
-answer1: poll.answer1.value,
-votes1: poll.answer1.votes,
-answer2: poll.answer2.value,
-votes2: poll.answer2.votes,
-answer3: poll.answer3.value,
-votes3: poll.answer3.votes
--->
