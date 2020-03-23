@@ -35,7 +35,7 @@ app.use('/results', resultsRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-    res.render('error', { message: 'Sorry, I don\'t think this page exists.' })
+    res.render('error', { title: 'Sorry, I don\'t think this page exists.' })
 })
 
 // error handler
@@ -46,7 +46,7 @@ app.use(function(err, req, res) {
 
     // render the error page
     res.status(err.status || 500)
-    res.render('error', { message: err.message })
+    res.render('error', { title: err.message })
 })
 
 module.exports = app

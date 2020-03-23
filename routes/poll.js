@@ -12,23 +12,29 @@ router.get('/', function(req, res) {
         Poll.findOne({ code: code }, function (err, poll) {
             if (err) {
                 if(err.code == 11000) {
-                    res.render('error', { message: 'poll does not exist' })
+                    res.render('error', { title: 'poll does not exist' })
                 }
                 else {
                     return res.send( err )
                 }
             }
             if (poll) {
-                res.render('poll', { 
-                    title: `Poll ${code}`,
-                    code: poll.code,
-                    statement: poll.statement,
-                    answer1: poll.answer1.value,
-                    answer2: poll.answer2.value,
-                    answer3: poll.answer3.value
-                })
+                if (poll.open === true) {
+                    res.render('poll', { 
+                        title: `Poll ${code}`,
+                        code: poll.code,
+                        statement: poll.statement,
+                        answer1: poll.answer1.value,
+                        answer2: poll.answer2.value,
+                        answer3: poll.answer3.value
+                    })
+                } else {
+                    res.render('closed', {title: 'this poll is already closed', code: code})
+                }
+                
+            } else {
+                res.render('error', { title: 'This poll does not exist' })
             }
-            else res.render('error', { message: 'poll does not exist' })
 
             // if(err) return next(err);
             // if (poll) {
