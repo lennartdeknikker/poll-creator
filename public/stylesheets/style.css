@@ -4,6 +4,7 @@
   --pink: rgb(255, 218, 204);
   --yellow: rgb(255, 249, 221);
   --yellow-d: rgb(255, 239, 169);
+  --yellow-dd: rgb(255, 232, 129);
   --blue: rgb(180, 225, 255);
 }
 
@@ -14,11 +15,14 @@
 
 body {
   background-color: var(--blue);
+  background: repeating-linear-gradient(45deg, var(--blue) 15px, white 400px);
+  height: 100vh;
   color: var(--green);
   text-align: center;
   display: flex;
   align-items: center;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .container {
@@ -88,7 +92,8 @@ button, input[type=submit] {
   width: 20rem;
   width: calc(20rem + 2px);
   box-sizing: border-box;
-  height: 3rem;
+  height: 3rem;  
+  transition: background-color .2s ease;
 }
 
 input[type=submit] {
@@ -196,11 +201,22 @@ ul {
   color: var(--yellow);
   font-weight: bold;
   padding: 1rem;
+  width: 3em;
 }
 
 .answer-buttons-list li a button span:last-child {
   display: flex;
-  padding: .5rem;
+  width: 100%;
+  padding: 1rem;
+  height: 100%;
   word-break: break-all;
   background-color: var(--yellow);
+}
+
+button:hover, input[type=submit]:hover {
+  background-color: var(--yellow-dd);
+}
+
+.wrong-input::placeholder {
+  color: red;
 }

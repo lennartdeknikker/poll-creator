@@ -31,8 +31,12 @@
   </li>
 </ul>
 
-<% if (refreshUrl) { %>
+<% if (refreshUrl && open) { %>
   <a href="<%= refreshUrl %> "><button>Refresh</button></a>
+<% } %>
+
+<% if (!open) { %>
+  <a href="/"><button>Create a new poll</button></a>
 <% } %>
 
 <% include ./partials/footer %> 

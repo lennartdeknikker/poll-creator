@@ -1,5 +1,5 @@
 <% include ./partials/header %> 
-  <form action="/created" method="POST">
+  <form id="create-poll-form" action="/created" method="POST">
     <fieldset>
       <legend>Poll statement</legend>
       <textarea maxlength="445" name="statement" id="textarea-pollstatement" cols="30" rows="10" placeholder="Write down your statement here"></textarea>
@@ -13,6 +13,6 @@
       <label for="answer1">C</label>
       <input name="answer3" id="answer3"  type="text" placeholder="third answer" maxlength="100">
     </fieldset>
-    <input type="submit" value="Create" />
+    <input id="create-new-button" type="submit" value="Create" />
   </form>
 <% include ./partials/footer %> 

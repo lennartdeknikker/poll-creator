@@ -18,36 +18,42 @@ router.post('/', function(req, res) {
     const answer3 = req.body.answer3
     const pollUrl = `${process.env.BASE_URL}/poll?code=${code}`
 
-    const testPoll = new Poll({
-        code: code,
-        pollUrl: pollUrl,
-        statement: statement,
-        answer1: {
-            value: answer1,
-            votes: 0
-        },
-        answer2: {
-            value: answer2,
-            votes: 0
-        },
-        answer3: {
-            value: answer3,
-            votes: 0
-        },
-    })
-
-    const onConnect = function() {
-        testPoll.save(function (err) {
-            if (err) return console.error(err); else {
-                console.log(`Added poll ${testPoll.code} to database`)
-            }
+    if (statement && answer1 && answer2 && answer3) {
+        const testPoll = new Poll({
+            code: code,
+            pollUrl: pollUrl,
+            statement: statement,
+            answer1: {
+                value: answer1,
+                votes: 0
+            },
+            answer2: {
+                value: answer2,
+                votes: 0
+            },
+            answer3: {
+                value: answer3,
+                votes: 0
+            },
         })
+    
+        const onConnect = function() {
+            testPoll.save(function (err) {
+                if (err) return console.error(err); else {
+                    console.log(`Added poll ${testPoll.code} to database`)
+                }
+            })
+        }
+    
+        mongo(onConnect)
+    
+    
+        res.render('created', { title: 'Poll created', code: code, statement: statement, pollUrl: pollUrl})
+    } else {
+        res.render('error', { title: 'sorry, you did not fill in all the necessary fields' } )
     }
 
-    mongo(onConnect)
-
-
-    res.render('created', { title: 'Poll created', code: code, statement: statement, pollUrl: pollUrl})
+    
 })
 
 module.exports = router
