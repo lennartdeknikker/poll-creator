@@ -106,14 +106,18 @@ h2 {
   margin-bottom: 0;
   padding-bottom: 1em;
   width: 100%;
+  word-wrap: break-word;
+  font-weight: normal;
 }
 
 h3 {
   color: var(--yellow);
   font-weight: normal;
+  word-wrap: break-word;
+  width: 100%;
 }
 
-h3 span {
+h3 span, h2 span {
   display: block;
   margin-bottom: .5em;
   font-weight: bold;
@@ -140,6 +144,9 @@ ul {
   border: 1px solid var(--yellow);
   padding: 0 0 .5rem;
   border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word
 }
 
 .answer-buttons-list li {
@@ -151,6 +158,10 @@ ul {
 }
 
 .poll-details-list li span {
+  padding: 0 0.5rem;
+  font-weight: bold;
+}
+.poll-details-list li span:first-child {
   display: block;
   font-weight: bold;
   border-bottom: 1px dashed var(--yellow);
@@ -166,26 +177,30 @@ ul {
   font-style: italic;
 }
 
-.answer-buttons-list li a button {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1rem 0 0;
-}
-
 .answer-buttons-list li a {
   text-decoration: none;
 }
 
-.answer-buttons-list li a button span {
+.answer-buttons-list li a button {
   border: 1px solid var(--yellow);
   background-color: var(--green);
-  color: var(--yellow);
   display: flex;
-  height: 3rem;
+  justify-content: space-between;
   align-items: center;
-  padding: 0 1rem;
+  padding: 0;
+  width: 100%;
+  height: auto;
+}
+
+.answer-buttons-list li a button span:first-child {
+  color: var(--yellow);
   font-weight: bold;
-  margin-right: 1rem;
-  border-radius: 2px 0 0 2px;
+  padding: 1rem;
+}
+
+.answer-buttons-list li a button span:last-child {
+  display: flex;
+  padding: .5rem;
+  word-break: break-all;
+  background-color: var(--yellow);
 }

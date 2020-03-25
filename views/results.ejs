@@ -1,6 +1,6 @@
 <% include ./partials/header %>
 
-<h2>Statement: <%= statement %> </h2>
+<h2><span>Statement: </span><%= statement %></h2>
 <% if (voted) { %>
   <h3>You voted for answer <%= voted %> </h3> 
 <% } %>
@@ -8,7 +8,7 @@
   <h4>This poll is closed now.</h4> 
 <% } %>
 <ul class="poll-details-list">
-  <li><span>Answer 1: <%= answer1 %></span><%= votes1 %> 
+  <li><span><em>Answer 1: </em><%= answer1 %></span><%= votes1 %> 
     <% if (votes1 === 1) { %>
       vote
     <% } else { %>

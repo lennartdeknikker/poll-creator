@@ -2,8 +2,8 @@
   <h2>Poll <%= code %> </h2>
   <h3><span>Statement: </span><%= statement %></h3>
   <ul class="answer-buttons-list">
-    <li><a href="/vote?answer=1&code=<%= code %>"><button><span>A. </span><%= answer1 %></button></a></li>
-    <li><a href="/vote?answer=2&code=<%= code %>"><button><span>B. </span><%= answer2 %></button></a></li>
-    <li><a href="/vote?answer=3&code=<%= code %>"><button><span>C. </span><%= answer3 %></button></a></li>
+    <li><a href="/vote?answer=1&code=<%= code %>"><button><span>A. </span><span><%= answer1 %></button></a></span></li>
+    <li><a href="/vote?answer=2&code=<%= code %>"><button><span>B. </span><span><%= answer2 %></button></a></span></li>
+    <li><a href="/vote?answer=3&code=<%= code %>"><button><span>C. </span><span><%= answer3 %></button></a></span></li>
   </ul>
 <% include ./partials/footer %>
