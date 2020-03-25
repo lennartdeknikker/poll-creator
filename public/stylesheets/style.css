@@ -13,16 +13,16 @@
   box-sizing: border-box;
 }
 
+
 body {
   background-color: var(--blue);
   background: repeating-linear-gradient(45deg, var(--blue) 15px, white 400px);
-  height: 100vh;
   color: var(--green);
   text-align: center;
   display: flex;
   align-items: center;
   flex-direction: column;
-  overflow: hidden;
+  min-height: 100vh;
 }
 
 .container {
