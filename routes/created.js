@@ -48,7 +48,7 @@ router.post('/', function(req, res) {
         mongo(onConnect)
     
     
-        res.render('created', { title: 'Poll created', code: code, statement: statement, pollUrl: pollUrl})
+        res.render('created', { title: 'Poll created', code: code, statement: statement, pollUrl: pollUrl, copyButton: true})
     } else {
         res.render('error', { title: 'sorry, you did not fill in all the necessary fields' } )
     }

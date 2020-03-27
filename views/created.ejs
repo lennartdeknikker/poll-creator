@@ -3,7 +3,14 @@
   <h2>Your poll is ready for sharing</h2>
     <ul class="poll-details-list">
       <li><span>Poll code: </span><span><%= code %></span></li>
-      <li><span>URL for entering this poll: </span><span><a href="<%= pollUrl %>"><%= pollUrl %></a></span></li>
+      <li>
+        <span>URL for entering this poll: </span>
+        <span class="poll-url">
+          <a href="<%= pollUrl %>">
+            <%= pollUrl %>
+          </a>
+        </span>
+      </li>
       <li><span>Poll statement: </span><span><%= statement %></span></li>
     </ul>
   <a href="/close?code=<%=code%> "><button>Close this poll and view results</button></a>

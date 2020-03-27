@@ -35,6 +35,19 @@ body {
   padding: 1rem;
   max-width: 22rem;
   width: 22rem;
+  perspective: 22rem;
+  transition: transform 0.7s linear;
+  transform-style: preserve-3d;
+  animation: flip 0.7s linear;
+}
+
+@keyframes flip {
+  from {
+    transform: rotateY(90deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
 }
 
 form {
@@ -100,6 +113,38 @@ input[type=submit] {
   border-radius: 0 0 2px 2px;
 }
 
+.poll-url-with-js {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.poll-url-with-js input {
+  width: 80%;
+  border: none;
+  background-color: var(--green);
+  color: var(--yellow);
+  font-weight: bold;
+}
+
+.poll-url-with-js input:focus {
+  outline: none;
+}
+
+.button-copy {
+  width: 2rem;
+  padding: 0.4rem;
+  height: 2rem;
+  background-image: url('/images/copy.png');
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: transparent;
+}
+
+button img {
+  height: 100%;
+}
 
 .button-create-new-poll {
   margin-bottom: 1rem;
