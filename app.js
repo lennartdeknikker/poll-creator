@@ -34,7 +34,7 @@ app.use('/vote', voteRouter)
 app.use('/results', resultsRouter)
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function(req, res) {
     res.render('error', { title: 'Sorry, I don\'t think this page exists.' })
 })
 
