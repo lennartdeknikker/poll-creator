@@ -73,7 +73,7 @@ if (createdNew) {
 
 const pollcodes = JSON.parse(localStorage.getItem('pollcodes'))
 
-if (pollcodes) {
+if (pollcodes.length > 0) {
     const list = document.createElement('ul')
     list.classList.add('polls-list')
 
