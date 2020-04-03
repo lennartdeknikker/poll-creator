@@ -258,6 +258,10 @@ button:hover, input[type=submit]:hover {
   background-color: var(--yellow-dd);
 }
 
+a:nth-of-type(2) button {
+  margin-top: .5rem
+}
+
 .wrong-input::placeholder {
   color: red;
 }
@@ -318,4 +322,8 @@ main {
 
 .poll-list-container h4 {
   margin: 0 0 1rem
+}
+
+.close-button:hover {
+  background-color: var(--pink);
 }
