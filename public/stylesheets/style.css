@@ -1,13 +1,3 @@
-:root {
-  --green: #648271;
-  --green-d: #2f3f36;
-  --pink: rgb(255, 218, 204);
-  --yellow: rgb(255, 249, 221);
-  --yellow-d: rgb(255, 239, 169);
-  --yellow-dd: rgb(255, 232, 129);
-  --blue: rgb(180, 225, 255);
-}
-
 * {
   font-family: 'Comfortaa', cursive, Arial, Helvetica, sans-serif;
   box-sizing: border-box;
@@ -15,9 +5,9 @@
 
 
 body {
-  background-color: var(--blue);
-  background: repeating-linear-gradient(45deg, var(--blue) 15px, white 400px);
-  color: var(--green);
+  background-color: rgb(180, 225, 255);
+  background: repeating-linear-gradient(45deg, rgb(180, 225, 255) 15px, white 400px);
+  color: #648271;
   text-align: center;
   display: flex;
   align-items: center;
@@ -26,7 +16,7 @@ body {
 }
 
 .container {
-  background-color: var(--green);
+  background-color: #648271;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -47,14 +37,14 @@ body {
 }
 
 form {
-  color: var(--yellow);
+  color: rgb(255, 249, 221);
   width: 20rem;
 }
 
 fieldset {
   display: flex;
   box-sizing: border-box ;
-  border: 1px solid var(--yellow-d);
+  border: 1px solid rgb(255, 239, 169);
   border-radius: 10px 10px 0 0;
   margin: 0;
   padding: 0 1rem 1rem
@@ -79,11 +69,11 @@ form input[type=text], textarea {
   padding: 1rem;
   border: none;
   border-radius: 2px;
-  background-color: var(--yellow);
+  background-color: rgb(255, 249, 221);
   font-style: italic;
   font-weight: bold;
   text-align: center;
-  color: var(--green);
+  color: #648271;
   margin-top: 0.5rem;
   resize: vertical;
   max-height: 20rem;
@@ -92,9 +82,9 @@ form input[type=text], textarea {
 
 button, input[type=submit] {
   cursor: pointer;
-  background-color: var(--yellow-d);
+  background-color: rgb(255, 239, 169);
   border: none;
-  color: var(--green);
+  color: #648271;
   padding: 1rem;
   font-weight: bold;
   border-radius: 2px;
@@ -118,8 +108,8 @@ input[type=submit] {
 .poll-url-with-js input {
   width: 80%;
   border: none;
-  background-color: var(--green);
-  color: var(--yellow);
+  background-color: #648271;
+  color: rgb(255, 249, 221);
   font-weight: bold;
 }
 
@@ -147,8 +137,8 @@ button img {
 }
 
 h2 {
-  color: var(--yellow);
-  border-bottom: 1px solid var(--yellow);
+  color: rgb(255, 249, 221);
+  border-bottom: 1px solid rgb(255, 249, 221);
   margin-bottom: 0;
   padding-bottom: 1em;
   width: 100%;
@@ -157,7 +147,7 @@ h2 {
 }
 
 h3 {
-  color: var(--yellow);
+  color: rgb(255, 249, 221);
   font-weight: normal;
   word-wrap: break-word;
   width: 100%;
@@ -174,11 +164,11 @@ h3 + h4 {
 }
 
 h4 {
-  color: var(--green-d);
+  color: #2f3f36;
 }
 
 ul {
-  color: var(--yellow);
+  color: rgb(255, 249, 221);
   list-style-type: none;
   padding: 0;
   width: 100%;
@@ -187,7 +177,7 @@ ul {
 
 .poll-details-list li {
   margin: 0 0 1em;
-  border: 1px solid var(--yellow);
+  border: 1px solid rgb(255, 249, 221);
   padding: 0 0 .5rem;
   border-radius: 2px;
   display: flex;
@@ -210,15 +200,15 @@ ul {
 .poll-details-list li span:first-child {
   display: block;
   font-weight: bold;
-  border-bottom: 1px dashed var(--yellow);
+  border-bottom: 1px dashed rgb(255, 249, 221);
   padding: .2rem;
   margin-bottom: .5rem;
-  color: var(--green);
-  background-color: var(--yellow);
+  color: #648271;
+  background-color: rgb(255, 249, 221);
 }
 
 .poll-details-list li a {
-  color: var(--yellow);
+  color: rgb(255, 249, 221);
   text-decoration: none;
   font-style: italic;
 }
@@ -228,8 +218,8 @@ ul {
 }
 
 .answer-buttons-list li a button {
-  border: 1px solid var(--yellow);
-  background-color: var(--green);
+  border: 1px solid rgb(255, 249, 221);
+  background-color: #648271;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -239,7 +229,7 @@ ul {
 }
 
 .answer-buttons-list li a button span:first-child {
-  color: var(--yellow);
+  color: rgb(255, 249, 221);
   font-weight: bold;
   padding: 1rem;
   width: 3em;
@@ -251,11 +241,11 @@ ul {
   padding: 1rem;
   height: 100%;
   word-break: break-all;
-  background-color: var(--yellow);
+  background-color: rgb(255, 249, 221);
 }
 
 button:hover, input[type=submit]:hover {
-  background-color: var(--yellow-dd);
+  background-color: rgb(255, 232, 129);
 }
 
 a:nth-of-type(2) button {
@@ -292,7 +282,7 @@ main {
 }
 
 .poll-list-container {
-  background-color: var(--green);
+  background-color: #648271;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -325,5 +315,5 @@ main {
 }
 
 .close-button:hover {
-  background-color: var(--pink);
+  background-color: rgb(255, 218, 204);
 }
