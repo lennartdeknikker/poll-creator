@@ -63,7 +63,7 @@ for (const button of buttons) {
 const createdNew = window.location.href.slice(-16, -3) === 'created?code='
 const closed = window.location.href.slice(-14, -3) === 'close?code='
 
-if (createdNew) {
+if (createdNew && Storage !== void(0)) {
     let codes = []
     if (localStorage.getItem('pollcodes')) codes = JSON.parse(localStorage.getItem('pollcodes'))
     const newCode = window.location.href.slice(-3)
@@ -71,7 +71,10 @@ if (createdNew) {
     localStorage.setItem('pollcodes', JSON.stringify(codes))
 }
 
-const pollcodes = JSON.parse(localStorage.getItem('pollcodes'))
+let pollcodes = []
+if (Storage !== void(0)) {
+    pollcodes = JSON.parse(localStorage.getItem('pollcodes'))
+}
 
 if (pollcodes.length > 0) {
     const list = document.createElement('ul')
@@ -102,7 +105,7 @@ if (pollcodes.length > 0) {
     document.querySelector('.poll-list-container').appendChild(list)
 }
 
-if (closed) {
+if (closed && Storage !== void(0)) {
     let codes = []
     const codeClosed = window.location.href.slice(-3)
     if (localStorage.getItem('pollcodes')) codes = JSON.parse(localStorage.getItem('pollcodes'))
