@@ -22,7 +22,6 @@ This simple tool allows users to create polls and share those with other partici
   - [Features](#features)
   - [Progressive enhancement](#progressive-enhancement)
     - [JavaScript](#javascript)
-      - [Next steps](#next-steps)
   - [Feature detection](#feature-detection)
 
 ## Core functionality
@@ -85,7 +84,5 @@ To improve the user experience, I added a script that does the following things:
 - When submitting a form, it adds a loader image, so the user is informed to wait for the server.
 - It uses localstorage to provide the user with links to all the polls he has created and makes it possible to switch between those.
 
-#### Next steps
-- 
-
 ## Feature detection
+Since localstorage is not supported in all browsers or may be blocked, I used feature detection to check if localstorage can be used before running that part of my code.
